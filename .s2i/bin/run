@@ -1,3 +1,4 @@
 #!/bin/sh
 cd ~/app-root
+python manage.py migrate
 python manage.py runserver 8080
