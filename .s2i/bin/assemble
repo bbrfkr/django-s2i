@@ -1,3 +1,4 @@
 #!/bin/sh
 cp -r /tmp/src/* ~
+chmod 777 -R ~/*
 pip install Django
