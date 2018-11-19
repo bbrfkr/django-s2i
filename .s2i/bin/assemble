@@ -1,4 +1,2 @@
 #!/bin/sh
-mkdir -p ~/app-root
-cp -pr /tmp/src/* ~/app-root/
 pip install Django
