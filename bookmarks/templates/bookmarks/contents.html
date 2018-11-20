@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>{{ folder.name }}</title>
+    </head>
+
+    <body>
+        <h1>{{ folder.name }}</h1>
+        <table border="2">
+            <tr>
+                <th>タイトル</th>
+                <th width="200">URL</th>
+                <th>備考</th>
+            </tr>    
+{% for bookmark in folder.bookmark_set.all %}
+            <tr>
+                <th>{{bookmark.abstract}}</th>
+                <th width="200"><a href="{{bookmark.url}}">{{bookmark.url}}</a></th>
+               <th>{{bookmark.description}}</th>
+            </tr>
+{% endfor %}
+        </table>
+        <a href="{% url 'index' %}">戻る</a>
+    </body>
+</html>
